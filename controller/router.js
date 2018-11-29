@@ -1,6 +1,10 @@
+var albumsData = require('../modals/file');
+
 exports.showIndex = function(req,res){
     // res.send('我是首页');
-    res.render('index');
+    res.render('index',{
+        album:albumsData.showAllAlbums()
+    });
 }
 
 exports.showAlbum = function(req,res){
